@@ -1,0 +1,34 @@
+.parameter__list{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.parameter__item{
+  margin-right: 24px;
+  display: flex;
+  align-items: top;
+   
+    .parameter__img{
+      width: 41px;
+      height: 41px;
+    }
+    
+}
+
+.noise{
+  margin-right: 12px;
+}
+
+.battery{
+  margin-right: 11px;
+}
+
+.fast-fuel{
+  margin-right: 15px;
+}
+
+.parameter__item:last-child{
+  margin-right: 0px;
+}
+
+

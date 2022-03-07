@@ -1,0 +1,76 @@
+.present{
+  
+  .container{
+    position: relative;
+
+  &::before{
+    position: absolute;
+    content: url(../img/decor/tr.png);
+    left: -2%;
+    bottom: -19px;
+  }
+
+.presentation{
+  
+
+      .presentation__list{
+           display: flex;
+           justify-content: space-around;
+           
+
+            .presentation__item{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              position: relative;
+              flex: 1;
+              
+            
+              
+              .presentation__img{
+                
+
+               .presentation__img-wrapper{
+                 width: 128px;
+                 height: 128px;
+                 border-radius: 50%;
+                 background: #F2F5F4;
+                 line-height: 128px;
+                 margin-bottom: 21px;
+
+                 .presentation__icon{
+                 vertical-align: middle;
+                 }
+               }
+              }
+
+               .presentation__parameter-name{
+                 color: #292929;
+                 font-size: 24px;
+                 margin-bottom: 2px;
+               }
+
+               .presentation__parameter-text{
+                line-height: 1.2;
+                color: #666666;
+               }
+            }
+            .presentation__item::before{
+              content: url(../img/decor/points.png);
+              position: absolute;
+              transform: translateX(50%);
+              padding: 0 3%;
+              right: 0;
+              top: 53px;
+            }
+
+            .presentation__item:last-child:before{
+              display: none;
+            }
+         }
+
+
+}
+}
+}

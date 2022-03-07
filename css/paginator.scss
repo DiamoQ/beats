@@ -1,0 +1,22 @@
+.paginator{
+  padding-top: 133px;
+}
+
+.paginator__item{
+  text-align: center;
+  width: 7px;
+  height: 7px;
+  background: #666666;
+  border: 1px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.paginator__item:last-child{
+  margin-bottom: 0px;
+}
+
+.paginator__item--active{
+  background: #E01F3D;
+  
+}

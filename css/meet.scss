@@ -1,0 +1,27 @@
+.meet{
+  background: url(../img/beats-model/ellipse-5.png) left 65% center no-repeat;
+  background-color: #F5F5F5;
+  padding-top: 24px;
+  padding-bottom: 51px;
+  height: 100vh;
+  min-height: 652px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+    .hero-container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      &::before{
+        position: absolute;
+        content: url(../img/decor/line.png);
+        right: 5%;
+        bottom: -78px;
+      }
+   
+    }
+}

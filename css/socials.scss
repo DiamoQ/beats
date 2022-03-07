@@ -1,0 +1,93 @@
+.socials{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.socials__item{
+  margin-right:11px;
+}
+
+.socials__item:last-child{
+  margin-right: 0;
+}
+
+.socials__icon{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.socials__icon--tg::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/sprite/sprites.png) -66px -10px;
+  width: 36px;
+  height: 36px;
+}
+
+.socials__icon--tg:hover:after{
+  width: 36px; 
+  height: 36px;
+  background: url(../img/sprite/sprites.png) -10px -10px;
+}
+
+
+.socials__icon--vk::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/sprite/sprites.png) -66px -66px;
+  width: 36px;
+  height: 36px;
+}
+
+.socials__icon--vk:hover:after{
+  width: 36px; 
+  height: 36px;
+  background: url(../img/sprite/sprites.png) -10px -66px;
+}
+
+.socials__icon--fb::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/sprite/sprites.png) -122px -10px;
+  width: 36px;
+  height: 36px;
+}
+
+.socials__icon--fb:hover:after{
+  width: 36px; 
+  height: 36px;
+  background: url(../img/sprite/sprites.png) -122px -66px;
+}
+
+.socials__icon--in::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/sprite/sprites.png) -10px -122px;
+  width: 36px;
+  height: 36px;
+}
+
+.socials__icon--in:hover:after{
+  width: 36px; 
+  height: 36px;
+  background: url(../img/sprite/sprites.png) -66px -122px;
+}

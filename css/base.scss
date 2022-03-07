@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+body{
+  font-family: "Play", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 1.42;
+  background: #FFFFFF;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+  max-width: 940px; 
+  margin: 0px auto ;
+}
+  
+a{
+  color: inherit;
+}
+  
+ul{
+  padding: 0;
+  margin: 0;
+}
+  
+ul li{
+  list-style: none;
+}
+  
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+  
+*{
+  box-sizing: border-box;
+}
