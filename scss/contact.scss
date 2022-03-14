@@ -1,0 +1,23 @@
+.contact{
+  padding-top: 10px;
+}
+
+.contact__phone{
+  text-decoration: none;
+  font-size: rem(18px);
+  flex: 1;
+  margin-right: rem(22px);
+  white-space:nowrap;
+  padding-top: 10px;
+
+  @include phones{
+    margin-right: 0;
+  }
+}
+
+.contact__phone::before{
+  content: url(../img/contact-icon/phone.png);
+  margin-right: rem(6px);
+  width: rem(14px);
+  height: rem(14px);
+}

@@ -1,0 +1,45 @@
+.team-section__main-title{
+  margin-bottom:rem(53px);
+}
+
+.team__list{
+  display: flex;
+}
+
+.team__item{
+  margin-right: rem(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team__photo{
+  margin-bottom: rem(25px);
+}
+
+.team__name{
+  position: relative;
+  margin-bottom: rem(11px);
+}
+
+.team__name:hover .team__dropdown{
+  display: block;
+  opacity: 1;
+}
+
+.team__dropdown{
+  display: none;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.team__dropdown-text{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+ 
+.team__item:last-child{
+  margin-right: 0;
+}
+      

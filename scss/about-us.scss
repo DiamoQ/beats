@@ -1,0 +1,19 @@
+.about-us{
+  background: #F8FAF9;
+  padding-top: rem(58px);
+  padding-bottom: rem(106px);
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-us__title{
+  font-size: rem(48px);
+  text-transform: uppercase;
+  margin-bottom: rem(44px);
+}
+  

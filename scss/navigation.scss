@@ -1,0 +1,45 @@
+.menu {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin-right: rem(47px);
+  padding-top: 10px;
+}
+
+.menu{
+  @include tablets{
+    display: none;
+  }
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: center;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: rem(18px);
+  flex-wrap: wrap;
+}
+.menu__item {
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  margin-right: rem(28px);
+}
+.menu__link {
+  text-decoration: none;
+  white-space:nowrap;
+}
+.menu__item:last-child {
+  margin-right: rem(0px);
+}
+
+.menu__link{
+  transition: 0.7s;
+}
+
+.menu__link:hover {
+  color: #E01F3D;
+}

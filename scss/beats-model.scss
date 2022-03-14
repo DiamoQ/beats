@@ -1,0 +1,63 @@
+.beats-model{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+line-height: 1.1;
+margin-bottom: rem(42px);
+
+@include tablets{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &:before{
+    content: url(../img/beats-model/ellipse-5-363.png);
+    margin-bottom: rem(64px);
+
+   @include phones{
+    margin-bottom: rem(48px);
+   } 
+}
+}
+}
+
+.beats-model__name{
+  font-size: rem(48px);
+  margin-bottom: rem(23px);
+  text-transform: uppercase;
+  padding-right: 53%;
+
+  @include tablets{
+    margin-bottom: rem(5px);
+    padding:0 2%;
+  }
+
+  @include phones{
+    margin-bottom: rem(14px);
+    font-size: 2rem;
+    padding:0 15%;
+  }
+}
+
+.beats-model__description{
+  font-family: "alegreya sans", sans-serif;
+  font-size: rem(21px);
+  margin-bottom: rem(36px);
+  line-height: 1.13;
+  padding: 0 64% 0 0;
+
+  @include tablets{
+    margin-bottom: rem(23px);
+    padding: 0 25%;
+  }
+
+  @include phones{
+    margin-bottom: rem(26px);
+    padding: 0 13%;
+  }
+}

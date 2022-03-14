@@ -1,0 +1,40 @@
+.parameter.meet__parameter{
+  @include tablets{
+    display: none;
+  }
+}
+
+.parameter__list{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.parameter__item{
+  margin-right: rem(24px);
+  display: flex;
+  align-items: top;
+   
+    .parameter__img{
+      width: rem(41px);
+      height: rem(41px);
+    }
+    
+}
+
+.noise{
+  margin-right: rem(12px);
+}
+
+.battery{
+  margin-right: rem(11px);
+}
+
+.fast-fuel{
+  margin-right: rem(15px);
+}
+
+.parameter__item:last-child{
+  margin-right: rem(0px);
+}
+
+

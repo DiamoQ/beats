@@ -1,0 +1,269 @@
+.form-section__main-title{
+  margin-bottom: rem(53px);
+  
+  @include tablets{
+    margin-bottom: rem(18px);
+  }
+
+  @include phones{
+    margin-bottom: rem(31px);
+  }
+
+  .section__title{
+    margin-bottom: 0;
+  }
+}
+
+.form-area{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+} 
+
+.form{
+  display: flex;
+  margin-bottom: rem(46px);
+
+  @include tablets{
+    flex-direction: column;
+    padding: 0 17%;
+  }
+
+  @include phones{
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.form__col{
+  margin-right: rem(27px);
+  flex: 1;
+
+  @include tablets{
+    margin-right: 0;
+  }
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.form__row{
+  display: flex;
+  margin-bottom: rem(7px);
+
+  &--textarea{
+    margin-bottom:rem(26px);
+
+    @include tablets{
+      margin-bottom: rem(18px);
+    }
+
+    @include phones{
+      margin-bottom: rem(13px);
+    }
+  }
+  @include tablets{
+    margin-bottom: rem(11px);
+  }
+}
+
+.form__block{
+  flex: 1;
+}
+
+.form__title{
+  margin-bottom: rem(6px);
+
+  @include tablets{
+    margin-bottom: rem(4px);
+  }
+}
+
+
+.form__block--top{
+  margin-right: rem(17px);
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  @include tablets{
+    margin-right: rem(22px);
+  }
+}
+
+.form__input{
+  border:solid rem(2px) transparent;
+  transition: 0.7s;
+  border-radius: 5px;
+  height: rem(58px);
+
+  @include tablets{
+    height: rem(36px);
+  }
+}
+
+.form__input:focus{
+    border:solid rem(2px) #E01F3D ;
+    outline: none;
+}
+
+.form__input--top{
+  width: 100%;
+  flex: 1;
+}
+      
+.form__input--medium{
+  width: 100%;
+}   
+
+.form__input-block{
+  width: 100%;
+  flex: 1;
+}
+
+.form__block--end{
+  margin-right: rem(13px);
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  @include tablets{
+    margin-right: rem(15px);
+  }
+}
+        
+.form__block .form__block--textarea{
+  width: 100%;
+}  
+
+.form__input-textarea{
+    width: 100%;
+    height: rem(152px);
+    resize: none;
+
+    @include tablets{
+      height: rem(82px);
+    }
+}
+    
+.form__controls{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: rem(19px);
+
+  @include phones{
+    justify-content: center;
+  }
+}
+
+  .form__controls--checkbox{
+    margin-bottom: rem(46px);
+
+    @include tablets{
+      margin-bottom: rem(38px);
+    }
+  }
+
+
+.radio{
+  display: flex;
+  margin-right: rem(16px);
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.choice__radio{
+  display: none;
+
+  &:checked ~ .radio-visible::before{
+    display: block;
+  }
+}
+
+.checkbox{
+  display: flex;
+}
+
+.choice__checkbox{
+  display: none;
+
+  &:checked ~ .checkbox-visible::before{
+    display: block;
+  }
+}
+
+.radio-visible{
+  width: rem(26px);
+  height: rem(26px);
+  margin-right: rem(10px);
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+
+  &::before{
+    content: "";
+    width: rem(14px);
+    height: rem(14px);
+    background: #E01F3D;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    @include phones{
+      width: rem(12px);
+      height: rem(12px);
+    }
+  }
+
+  @include phones{
+    width: rem(24px);
+    height: rem(24px);
+  }
+}
+
+.checkbox-visible{
+  width: rem(26px);
+  height: rem(26px);
+  margin-right: rem(10px);
+  background: #fff;
+  position: relative;
+
+  &::before{
+    content: "";
+    width: rem(14px);
+    height: rem(14px);
+    background: url(../img/checkbox/checkmark.png) center center no-repeat;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @include phones{
+    width: rem(24px);
+    height: rem(24px);
+  }
+}
+
+.choice__checkbox{
+  display: none;
+           }
+        
+.form__buttons{
+
+  @include tablets{
+  text-align: center;
+}
+}

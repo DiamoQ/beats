@@ -1,0 +1,140 @@
+ 
+.review-container{
+  position: relative;
+
+ &::before{
+    position: absolute;
+    content: url(../img/decor/circle.png);
+    left: 0%;
+    bottom: rem(-25px);
+}
+}
+
+.review__main-title{
+   margin-bottom: rem(25px);
+}
+      
+
+.review-box{  
+  display: flex;
+  width: rem(940px);
+  min-height: rem(348px);
+  background-color: #F8FAF9;
+  padding: rem(42px);
+  margin-bottom: rem(15px);
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    min-height: rem(418px);
+    padding: 55px 0;
+    margin-bottom: rem(32px);
+  }
+
+  @include phones{
+    flex-direction: column;
+    align-items: center;
+    width: rem(460px);
+  }
+}
+
+.review__photo{
+  width: rem(253px);
+  height: rem(264px);
+  margin-right:  rem(40px);
+
+  @include tablets{
+    width: rem(130px);
+    height: rem(130px);
+    margin-right: 0;
+  }
+
+  @include phones{
+    width: rem(130px);
+    height: rem(130px);
+    margin-right: 0;
+    margin-bottom: rem(14px);
+  }
+}
+
+.review__content{
+  display: flex;
+  flex-direction: column;
+  padding-top:rem(29px);
+  padding-right: rem(56px);
+
+  @include tablets{
+    padding-right: 0;
+  }
+
+  @include phones{
+    padding-right:0;
+    padding-top: 0;
+  }
+}
+
+.review__comment{
+  font-size: rem(24px);
+  font-weight: bold;
+  margin-bottom: rem(22px);
+
+  @include tablets{
+    margin-bottom: rem(12px);
+  }
+}
+
+.review__text{
+  color: #666666;
+  margin-bottom: rem(33px);
+  line-height: 1.3;
+
+  @include tablets{
+    padding: 0 15%;
+  }
+
+  @include phones{
+    padding: 0 8%;
+    margin-bottom: rem(12px);
+  }
+}
+
+.review__name{
+  font-size: rem(18px);
+  font-weight: bold;
+}
+
+.review__list{
+   display: flex;
+}
+          
+.review__item{
+  width: rem(74px);
+  height: rem(74px);
+  margin-right: rem(6px);
+
+  @include phones{
+    width: rem(64px);
+    height:rem(64px);
+    margin-right: rem(10px);
+  }
+}
+
+.review__link{
+  width: 100%;
+  height: 100%;
+}
+
+.review__photo-icons{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+         
+.review__item--active{
+  border: rem(3px) solid #E01F3D;
+  border-radius: 50%;
+}
+      
+      

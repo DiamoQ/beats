@@ -1,0 +1,11 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact.header__contact{
+  @include tablets{
+    display: none;
+  }
+}
