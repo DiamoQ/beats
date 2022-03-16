@@ -346,6 +346,11 @@ template {
 html {
   font-size: 16px;
 }
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 3.333vmin;
+  }
+}
 
 body {
   font-family: "Play", sans-serif;
@@ -540,7 +545,7 @@ h1, h2, h3, h4, h5, h6, p {
 @media screen and (max-width: 768px) {
   .beats-model__name {
     margin-bottom: 0.3125rem;
-    padding: 0 2%;
+    padding: 0 4%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -862,6 +867,18 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin: 0 3%;
+}
+.presentation__item:first-child {
+  margin-left: 0;
+}
+.presentation__item:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .presentation__item {
+    margin: 0 1.6%;
+  }
 }
 @media screen and (max-width: 480px) {
   .presentation__item {
@@ -896,6 +913,12 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   left: 27%;
   top: 23%;
+}
+
+@media screen and (max-width: 480px) {
+  .presentation__content {
+    text-align: start;
+  }
 }
 
 .presentation__parameter-name {
@@ -1306,7 +1329,7 @@ h1, h2, h3, h4, h5, h6, p {
             justify-content: space-between;
     text-align: center;
     min-height: 26.125rem;
-    padding: 55px 0;
+    padding: 3.4375rem 0 2.1875rem;
     margin-bottom: 2rem;
   }
 }
@@ -1671,10 +1694,12 @@ h1, h2, h3, h4, h5, h6, p {
   transition: 0.7s;
   border-radius: 5px;
   height: 3.625rem;
+  padding: 1.1875rem 0.75rem;
 }
 @media screen and (max-width: 768px) {
   .form__input {
     height: 2.25rem;
+    padding: 0.5rem 0.625rem;
   }
 }
 

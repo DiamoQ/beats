@@ -98,9 +98,11 @@
   transition: 0.7s;
   border-radius: 5px;
   height: rem(58px);
+  padding:rem(19px) rem(12px);
 
   @include tablets{
     height: rem(36px);
+    padding:rem(8px) rem(10px);
   }
 }
 
