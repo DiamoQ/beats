@@ -4,6 +4,10 @@
 
 .team__list{
   display: flex;
+
+  @include tablets{
+    flex-direction: column;
+  }
 }
 
 .team__item{
@@ -11,26 +15,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include tablets{
+    margin-right: 0;
+    margin-bottom: rem(16px);
+  }
 }
 
 .team__photo{
   margin-bottom: rem(25px);
+
+  @include tablets{
+   display: none;
+  }
 }
 
 .team__name{
   position: relative;
   margin-bottom: rem(11px);
-}
 
-.team__name:hover .team__dropdown{
-  display: block;
-  opacity: 1;
+  @include tablets{
+    margin-bottom: 0;
+  }
+
+  &::after{
+    content: url('../img/decor/team-name-icon.png');
+    width: rem(9px);
+    height: rem(9px);
+    margin-left: rem(4px);
+  }
 }
 
 .team__dropdown{
   display: none;
-  opacity: 0;
-  transition: 0.7s;
 }
 
 .team__dropdown-text{

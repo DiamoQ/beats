@@ -1,5 +1,9 @@
 .container-offer{
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
     
   &::before{
     position: absolute;
@@ -49,6 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
   flex: 1;
 
   @include tablets{
@@ -86,8 +91,10 @@
   width: rem(273px);
   min-height: rem(294px);
   padding: rem(35px) rem(25px) rem(34px) rem(30px);
-  z-index: 1;
   background:rgba(0, 0, 0, 0.06);
+  top: 0;
+  left: rem(91px);
+  overflow:hidden;
 }
 
 .float-menu__dropdown-list{
@@ -101,6 +108,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: rem(28px);
 }
                 
 .float-menu__dropdown-line{
