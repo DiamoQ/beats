@@ -1,7 +1,6 @@
 .container-offer{
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row;
     
@@ -12,6 +11,46 @@
     bottom: rem(-27px);
 }
 }
+
+.swap{
+  position: absolute;
+
+  @include tablets{
+    width: rem(13.5px);
+    height: rem(27px);
+  }
+
+
+  &--left{
+    left: 0;
+
+    @include tablets{
+      top: 34%;
+      left: 18%;
+    }
+
+    @include phones{
+      top: 32%;
+      left: -2%;
+    }
+  }
+
+  &--right{
+    right: 0;
+
+    @include tablets{
+      top: 34%;
+      right: 18%;
+    }
+
+    @include phones{
+      top: 32%;
+    right: -2%;
+    }
+  }
+}
+
+
 
 .offer{
   display: flex;
@@ -27,9 +66,9 @@
 .offer__photo{
   width: rem(452px);
   height: rem(452px);
-  margin-right: rem(59px);
+  margin-right: rem(57px);
   margin-top: rem(26px);
-  margin-left: rem(29px);
+  margin-left: rem(33px);
 
   @include tablets{
     width: rem(306px);
@@ -91,7 +130,7 @@
   width: rem(273px);
   min-height: rem(294px);
   padding: rem(35px) rem(25px) rem(34px) rem(30px);
-  background:rgba(0, 0, 0, 0.06);
+  background:#e5e6e5;
   top: 0;
   left: rem(91px);
   overflow:hidden;

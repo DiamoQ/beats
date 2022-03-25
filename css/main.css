@@ -842,6 +842,16 @@ h1, h2, h3, h4, h5, h6, p {
   color: #fff;
 }
 
+.section-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .present .container {
   position: relative;
 }
@@ -1067,9 +1077,6 @@ h1, h2, h3, h4, h5, h6, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1083,6 +1090,46 @@ h1, h2, h3, h4, h5, h6, p {
   content: url(../img/decor/square.png);
   right: -1%;
   bottom: -1.6875rem;
+}
+
+.swap {
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .swap {
+    width: 0.84375rem;
+    height: 1.6875rem;
+  }
+}
+.swap--left {
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .swap--left {
+    top: 34%;
+    left: 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .swap--left {
+    top: 32%;
+    left: -2%;
+  }
+}
+.swap--right {
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .swap--right {
+    top: 34%;
+    right: 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .swap--right {
+    top: 32%;
+    right: -2%;
+  }
 }
 
 .offer {
@@ -1112,9 +1159,9 @@ h1, h2, h3, h4, h5, h6, p {
 .offer__photo {
   width: 28.25rem;
   height: 28.25rem;
-  margin-right: 3.6875rem;
+  margin-right: 3.5625rem;
   margin-top: 1.625rem;
-  margin-left: 1.8125rem;
+  margin-left: 2.0625rem;
 }
 @media screen and (max-width: 768px) {
   .offer__photo {
@@ -1196,7 +1243,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 17.0625rem;
   min-height: 18.375rem;
   padding: 2.1875rem 1.5625rem 2.125rem 1.875rem;
-  background: rgba(0, 0, 0, 0.06);
+  background: #e5e6e5;
   top: 0;
   left: 5.6875rem;
   overflow: hidden;
@@ -1956,12 +2003,13 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.container--map {
+.section-footer__map {
   background: url(../img/map/map.png) no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 32.875rem;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .footer__container {

@@ -1,7 +1,7 @@
 let hamburger = document.querySelector('#hamburger');
-let menu = document.querySelectorAll('.menu');
-let back = document.querySelectorAll('body');
-let menu__list = document.querySelectorAll('.menu__list');
+let menu = document.querySelectorAll('#menu');
+let back = document.querySelectorAll('#body');
+let menu__list = document.querySelectorAll('#menu__list');
 
 hamburger.onclick = function(){
     hamburger.classList.toggle('--active');

@@ -1,7 +1,8 @@
-.container--map{
+.section-footer__map{
   background: url(../img/map/map.png) no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  min-height: rem(526px);
+  width: 100%;
+  min-height: 100vh;
 }
