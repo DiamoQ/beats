@@ -1,5 +1,4 @@
- 
-.review-container{
+ .review-container{
   position: relative;
 
  &::before{
@@ -10,17 +9,28 @@
 }
 }
 
-.review__main-title{
+.review-title{
    margin-bottom: rem(25px);
 }
       
 
-.review-box{  
-  display: flex;
+.review__box{  
+  position: absolute;
   min-height: rem(348px);
   background-color: #F8FAF9;
   padding: rem(42px);
   margin-bottom: rem(15px);
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &:nth-child(1){
+    position: relative;
+  }
+
+  &--active{
+    opacity: 1;
+  }
 
   @include tablets{
     flex-direction: column;
@@ -118,6 +128,11 @@
     height:rem(64px);
     margin-right: rem(10px);
   }
+
+  &--active{
+    border: rem(3px) solid #E01F3D;
+    border-radius: 50%;
+  }
 }
 
 .review__link{
@@ -130,10 +145,4 @@
   height: 100%;
   border-radius: 50%;
 }
-         
-.review__item--active{
-  border: rem(3px) solid #E01F3D;
-  border-radius: 50%;
-}
-      
       

@@ -1,0 +1,91 @@
+.colors__list{
+  display: flex;
+  position: absolute;
+  justify-content: end;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.colors__item{
+  display: flex;
+}
+
+
+.colors__button{
+  position: relative;
+  width: rem(102px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-decoration: none;
+  padding-bottom: rem(34px);
+
+  &--atlas{
+    background: #999999;
+  }
+
+  &--black{
+    background-color: #151515;
+  }
+
+  &--red{
+    background-color: #E01F3C;
+  }
+
+  @include phones{ 
+    width: rem(90px);
+  }
+
+  &--active{
+    @include phones{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: rem(90px);
+      z-index: 4;
+    }
+  }
+}
+
+.colors__name{
+  display: inline-block;
+  transform: rotate(270deg) translateX(50%);
+  font-size: rem(36px);
+  font-weight: bold;
+}
+
+.colors__content{
+  background: #333537;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.7s;
+
+  &--active{
+    width: rem(524px);
+    opacity: 0.6;
+    padding: rem(51px) rem(38px);
+
+    @include tablets{
+      width: 100%;
+    }
+
+    @include phones{
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      flex: 2;
+      width: 100%;
+      padding-left: rem(120px);
+    }
+}
+
+@include tablets{
+  transition: width 0s;
+}
+
+}

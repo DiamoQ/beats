@@ -13,6 +13,7 @@
 .team__item{
   margin-right: rem(20px);
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
 
@@ -22,32 +23,68 @@
   }
 }
 
+.team__content{
+  text-align: center;
+}
+
 .team__photo{
   margin-bottom: rem(25px);
 
   @include tablets{
    display: none;
   }
+
+  &--tablet{
+    display: none;
+
+    @include tablets{
+      display: block;
+      width:rem(222px);
+      height: rem(290px);
+    }
+  }
 }
 
 .team__name{
   position: relative;
   margin-bottom: rem(11px);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: bold;
 
   @include tablets{
-    margin-bottom: 0;
+    margin-bottom: rem(15px);
   }
 
   &::after{
-    content: url('../img/decor/team-name-icon.png');
+    position: absolute;
+    content: '';
+    top: 30%;
     width: rem(9px);
     height: rem(9px);
-    margin-left: rem(4px);
+    margin-left: rem(5px);
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+    background: url("../img/decor/team-name-icon.png") center center no-repeat;
+  }
+
+  &--active{
+    &::after{
+      transform: rotate(180deg);
+    }
   }
 }
 
 .team__dropdown{
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  will-change: max-height;
+
+  &--active{
+    max-height: 100%;
+  }
 }
 
 .team__dropdown-text{

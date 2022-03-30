@@ -1,8 +1,5 @@
 .container-offer{
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+  
     
   &::before{
     position: absolute;
@@ -10,6 +7,18 @@
     right: -1%;
     bottom: rem(-27px);
 }
+
+ .bx-wrapper{
+   box-shadow: none;
+   border: 0;
+   background:transparent;
+   margin-bottom: 0;
+ }
+}
+
+.slide__page{
+  display: flex;
+  align-items: center;
 }
 
 .swap{

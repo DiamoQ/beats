@@ -11,7 +11,6 @@
   height: 100%;
 }
 
-
 .section__name{
   display: flex;
   flex-direction: column;
@@ -85,5 +84,14 @@
 .section-footer{
   display: flex;
   flex-direction: column;
-  
+}
+
+.colors{
+  background-image: url(../img/backgrounds/back.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  position: relative;
 }
