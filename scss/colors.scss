@@ -61,12 +61,13 @@
   background: #333537;
   width: 0;
   overflow: hidden;
-  transition: width 0.7s;
+  transition: width 0.7s, font-size 0.7s;
+  font-size: 0;
 
   &--active{
     width: rem(524px);
     opacity: 0.6;
-    padding: rem(51px) rem(38px);
+    font-size: rem(16px);
 
     @include tablets{
       width: 100%;
@@ -87,5 +88,8 @@
 @include tablets{
   transition: width 0s;
 }
+}
 
+.colors__text{
+  padding: rem(51px) rem(38px);
 }

@@ -23,6 +23,7 @@
 
 .swap{
   position: absolute;
+  z-index: 10;
 
   @include tablets{
     width: rem(13.5px);
@@ -31,29 +32,29 @@
 
 
   &--left{
-    left: 0;
+    left: -18px;
 
     @include tablets{
-      top: 34%;
+      top: 32%;
       left: 18%;
     }
 
     @include phones{
-      top: 32%;
+      top: 30%;
       left: -2%;
     }
   }
 
   &--right{
-    right: 0;
+    right: -25px;
 
     @include tablets{
-      top: 34%;
+      top: 32%;
       right: 18%;
     }
 
     @include phones{
-      top: 32%;
+      top: 30%;
     right: -2%;
     }
   }

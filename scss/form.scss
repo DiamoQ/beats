@@ -279,14 +279,15 @@
   background: rgba(00, 00, 00, .5);
   justify-content: center;
   align-items: center;
-  display: flex;
   display: none;
 }
 
 .hidden-window__container{
   position: absolute;
-  width: rem(200px);
-  height: rem(150px);
+  left: calc(50% - 154px);
+  top: calc(50% - 88px);
+  width: rem(309px);
+  height: rem(176px);
   background: #fff;
   color: black;
   text-align: center;

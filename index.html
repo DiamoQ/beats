@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beats</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body id="body">
   <div class="wrapper">
-    <main>
-      <section class="section section-meet">
+    <div class="main">
+      <section class="section section-meet" data-section-id="meet">
         <div class="container hero-container">
           <header class="header">
             <div class="logo">
@@ -22,28 +22,28 @@
                 <img src="img/logo/logo.png" alt="logo" class="logo__img">
               </a>
             </div>
-            <nav class="menu" id="#menu">
+            <nav class="menu" id="menu">
               <ul class="menu__list" id="menu__list">
                 <li class="menu__item">
-                  <a href="#" class="menu__link">О нас</a>
+                  <a href="#" class="menu__link" data-scroll-to="present">О нас</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">Наушники</a>
+                  <a href="#" class="menu__link" data-scroll-to="offer">Наушники</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">Команда</a>
+                  <a href="#" class="menu__link" data-scroll-to="team">Команда</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">Цвета</a>
+                  <a href="#" class="menu__link" data-scroll-to="colors">Цвета</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#review-link" class="menu__link">Отзывы</a>
+                  <a href="#review-link" class="menu__link" data-scroll-to="review">Отзывы</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">Как мы работаем</a>
+                  <a href="#" class="menu__link" data-scroll-to="video">Как мы работаем</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">Контакты</a>
+                  <a href="#" class="menu__link" data-scroll-to="footer">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -60,7 +60,7 @@
             <h1 class="beats-model__name">Беспроводные наушники Beats Solo 3</h1>
             <p class="beats-model__description">Встречайте новую версию наушников
               из линейки Powerbeats.</p>
-            <a class="button order-button">заказать</a>
+            <a class="button order-button" data-scroll-to="form">заказать</a>
           </div>
           <div class="parameter meet__parameter">
             <ul class="parameter__list">
@@ -86,7 +86,7 @@
           </div>
         </div>
       </section>
-      <section class="section present">
+      <section class="section present" data-sidemenu-theme="dark" data-section-id="present">
         <div class="container">
           <div class="section__name present-section__main-title">
             <h2 class="section__subtitle subtitle">почему beats solo 3?</h2>
@@ -142,13 +142,16 @@
           </div>
         </div>
       </section>
-      <section class="section section-dark">
+      <section class="section section-dark" data-sidemenu-theme="dark" data-section-id="offer">
         <div class="container container-offer">
+          <a class="swap swap--left" href="#">
+            <img src="img/decor/left.png" class="swap__img">
+          </a>
+          <a class="swap swap--right " href="#">
+            <img src="img/decor/right.png">
+          </a>
           <div class="slide">
             <div class="slide__page">
-              <a class="swap swap--left" href="#">
-                <img src="img/decor/left.png" class="swap__img">
-              </a>
               <div class="offer">
                 <div class="offer__photo">
                   <img src="img/beats-model/beats-atlas.png" alt="" class="offer__img">
@@ -231,14 +234,8 @@
                   </div>
                 </div>
               </div>
-              <a class="swap swap--right " href="#">
-                <img src="img/decor/right.png">
-              </a>
             </div>
             <div class="slide__page">
-              <a class="swap swap--left" href="#">
-                <img src="img/decor/left.png" class="swap__img">
-              </a>
               <div class="offer">
                 <div class="offer__photo">
                   <img src="img/beats-model/beats-citrus.png" alt="" class="offer__img">
@@ -321,14 +318,11 @@
                   </div>
                 </div>
               </div>
-              <a class="swap swap--right" href="#">
-                <img src="img/decor/right.png">
-              </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section" data-sidemenu-theme="dark" data-section-id="team">
         <div class="container">
           <div class="section__name team-section__main-title">
             <h2 class="section__subtitle">команда</h2>
@@ -391,7 +385,7 @@
           </div>
         </div>
       </section>
-      <section class="section colors">
+      <section class="section colors" data-sidemenu-theme="white" data-section-id="colors">
         <ul class="colors__list" id="colorList">
           <li class="colors__item">
             <a class="colors__button colors__button--atlas" href="#">
@@ -435,7 +429,7 @@
           </li>
         </ul>
       </section>
-      <section class="section review" id="review-link">
+      <section class="section review" id="review-link" data-sidemenu-theme="dark" data-section-id="review">
         <div class="container container-center review-container">
           <div class="review-title">
             <h2 class="section__subtitle">отзывы</h2>
@@ -500,17 +494,44 @@
           </ul>
         </div>
       </section>
-      <section class="section video-section section-dark">
+      <section class="section video section-dark" data-sidemenu-theme="dark" data-section-id="video">
         <div class="container container-center">
-          <div class="section__name video-section__main-title">
+          <div class="section__name video__main-title">
             <h2 class="section__subtitle">как мы работаем</h2>
           </div>
-          <iframe src="https://www.youtube.com/embed/Dd1VIeTMGQs" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen class="video-section__player"></iframe>
+          <div class="video__wrapper">
+            <div class="video__player">
+              <video id="video" src="video/Beats by Dr.Dre - Beats Solo3 Wireless.mp4"
+                poster="img/video-icons/poster_.png">
+                <source src="video/Beats by Dr.Dre - Beats Solo3 Wireless.mp4" type="video/mp4">
+              </video>
+              <button class="video__btn-start">
+                <img src="img/video-icons/play.svg" alt="" class="start video__btn-start">
+              </button>
+            </div>
+            <div class="video__toolbar">
+              <div class="duration">
+                <div class="duration__btn-wrap">
+                  <button class="start duration__start">
+                  </button>
+                </div>
+                <div class="duration__length-wrap">
+                  <input type="range" class="duration__length" id="durationLevel">
+                </div>
+              </div>
+              <div class="sound" id="mic">
+                <button class="sound__btn">
+                  <img src="img/video-icons/volume.svg" class="sound__mic" alt="">
+                </button>
+                <div class="sound__volume">
+                  <input type="range" class="duration__length duration__lenght--other" id="micLvl">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section form-section">
+      <section class="section form-section" data-sidemenu-theme="white" data-section-id="form">
         <div class="container">
           <div class="section__name form-section__main-title">
             <h2 class="section__subtitle subtitle-dark">закажите доставку</h2>
@@ -595,8 +616,8 @@
           </div>
         </div>
       </section>
-      <section class="section section-footer">
-        <div class="section-footer__map">
+      <section class="section section-footer" data-sidemenu-theme="black" data-section-id="footer">
+        <div class="section-footer__map" id="map">
         </div>
         <footer class="footer">
           <div class="container  footer__container">
@@ -651,15 +672,54 @@
           </div>
         </footer>
       </section>
-    </main>
+    </div>
   </div>
+  <nav class="fixed-menu">
+    <ul class="fixed-menu__list">
+      <li class="fixed-menu__item fixed-menu__item--active">
+        <a href="" data-scroll-to="meet" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="present" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="offer" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="team" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="colors" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="review" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="video" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="form" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="" data-scroll-to="footer" class="fixed-menu__link"></a>
+      </li>
+    </ul>
+  </nav>
   <script src="jQuery/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="js/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+  <script src="js/one-page-scroll.js"></script>
   <script src="js/tablet-menu.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/team.js"></script>
   <script src="js/colors-menu.js"></script>
   <script src="js/review.js"></script>
+  <script src="js/video.js"></script>
   <script src="js/form-modal.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="js/map.js"></script>
 </body>
+
+</html>

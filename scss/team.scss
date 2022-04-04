@@ -4,9 +4,11 @@
 
 .team__list{
   display: flex;
+  min-height: rem(500px);
 
   @include tablets{
     flex-direction: column;
+    min-height: auto;
   }
 }
 
@@ -81,6 +83,10 @@
   overflow: hidden;
   transition: max-height 0.4s;
   will-change: max-height;
+  
+  @include tablets{
+    transition: max-height 0s;
+  }
 
   &--active{
     max-height: 100%;
