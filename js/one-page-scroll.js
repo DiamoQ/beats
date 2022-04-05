@@ -147,7 +147,7 @@ if (isMobile) {
       if (direction == "down") scrollDirection = "prew";
 
       scroller[scrollDirection]();
-    },
+    }
   });
 }
 
