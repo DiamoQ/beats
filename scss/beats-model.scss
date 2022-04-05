@@ -39,7 +39,7 @@ margin-bottom: rem(42px);
 
   @include phones{
     margin-bottom: rem(14px);
-    font-size: 2rem;
+    font-size: rem(32px);
     padding:0 15%;
   }
 }

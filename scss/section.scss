@@ -44,6 +44,11 @@
   @include tablets{
     margin-bottom: rem(4px);
   }
+
+  @include phones{
+    font-size: rem(32px);
+    letter-spacing: 0.7px;
+  }
 }
 
 .subtitle-dark{

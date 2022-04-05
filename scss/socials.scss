@@ -2,6 +2,15 @@
   display: flex;
   justify-content:space-between;
   align-items: center;
+
+  @include tablets{
+    margin-right: rem(25px);
+  }
+
+  
+  @include phones{
+    margin-right: 0;
+  }
 }
 
 .socials__item{

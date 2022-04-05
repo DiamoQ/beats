@@ -26,7 +26,7 @@
 
   @include tablets{
     flex-direction: column;
-    padding: 0 17%;
+    padding: 0 18%;
   }
 
   @include phones{
@@ -52,20 +52,21 @@
   display: flex;
   margin-bottom: rem(7px);
 
-  &--textarea{
-    margin-bottom:rem(26px);
+  @include tablets{
+    margin-bottom: rem(11px);
+  }
+}
+
+.form__row.form__row--textarea{
+  margin-bottom:rem(26px);
 
     @include tablets{
       margin-bottom: rem(18px);
     }
 
     @include phones{
-      margin-bottom: rem(13px);
+      margin-bottom: rem(19px);
     }
-  }
-  @include tablets{
-    margin-bottom: rem(11px);
-  }
 }
 
 .form__block{
@@ -139,6 +140,10 @@
         
 .form__block .form__block--textarea{
   width: 100%;
+
+  @include tablets {
+    margin-bottom: rem(13px);
+  }
 }  
 
 .form__input-textarea{
@@ -158,6 +163,10 @@
   cursor: pointer;
   user-select: none;
   margin-bottom: rem(19px);
+
+  @include tablets{
+    margin-bottom: rem(23px);
+  }
 
   @include phones{
     justify-content: center;
@@ -294,6 +303,10 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+
+.hidden-window__content{
+  margin-bottom: rem(36px);
 }
 
 .input-error{

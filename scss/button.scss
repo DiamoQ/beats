@@ -9,6 +9,14 @@
   border-radius: rem(35px);
   color: #fff;
   transition: 0.7s;
+
+  @include tablets{
+    padding: rem(21px) rem(42px);
+  }
+  @include phones{
+    padding: rem(21px) rem(40px);
+    font-size: rem(19px);
+  }
 }
 
 
@@ -30,8 +38,18 @@
    }
 
 }
+
+.button-offer{
+  @include phones{
+    padding: rem(19px) rem(41px);
+    font-size: rem(16px);
+  }
+}
+
 .form__button{
   margin-right: rem(15px);
+  font-size: rem(16px);
+  padding: rem(22px) rem(40px);
 }
 
 .button--clear{
@@ -43,4 +61,17 @@
     background: none;
     color: #E01F3D;
   }
+}
+
+.app-submit-btn{
+  text-transform:uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  padding: rem(18px) rem(41px);
+  background: #E01F3D;
+  border: rem(1px);
+  border-radius: rem(35px);
+  color: #fff;
+  transition: 0.7s;
 }

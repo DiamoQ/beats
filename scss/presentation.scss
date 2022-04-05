@@ -20,7 +20,7 @@
   }
 
   @include phones{
-    margin-bottom: rem(33px);
+    margin-bottom: rem(50px);
   }
 }
       
@@ -56,8 +56,8 @@
 
   @include phones{
     flex-direction: row;
-    align-items: center;
-    margin-bottom: rem(31px);
+    align-items: flex-start;
+    margin-bottom: rem(13px);
   }
 }
    
@@ -88,6 +88,7 @@
 
   @include phones{
     text-align: start;
+    margin-top: rem(9px);
   }
 }
             
@@ -99,12 +100,16 @@
   @include tablets{
     margin-bottom: rem(15px);
   }
+
+  @include phones{
+    margin-bottom: rem(3px);
+  }
 }
 
 .presentation__parameter-text{
   line-height: 1.2;
   color: #666666;
-  padding: 0px 10%;
+  padding: 0px 6%;
 
   @include tablets{
     padding: 0;
@@ -116,7 +121,7 @@
   position: absolute;
   transform: translateX(50%);
   padding: 0 3%;
-  right: 0;
+  right: rem(-32px);
   top: rem(53px);
   display: block;
 
