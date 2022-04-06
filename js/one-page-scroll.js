@@ -120,7 +120,7 @@ $(window).on("keydown", e => {
 });
 
 $(".wrapper").on("touchmove", e => {
-e, preventDefault();
+e.preventDefault();
 });
 
 $("[data-scroll-to]").click(e => {
