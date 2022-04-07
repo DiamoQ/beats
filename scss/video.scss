@@ -146,8 +146,15 @@
   position: relative;
   align-items: center;
   margin: 0 rem(20px);
+}
+
+.sound__btn{
+  background: transparent;
+  border: 0;
+  padding: 0;
 
   &:before{
+    content: "";
     width: rem(29px);
     height: rem(3px);
     background-color: #E01F3D;
@@ -157,8 +164,7 @@
     top: 50%;
     transform: translateY(-50%) rotate(42deg);
     z-index: 2;
-    opacity: 1;
-    transition: opacity 0.3s;
+    opacity: 0;
   }
 
   &--active{
@@ -166,12 +172,6 @@
       opacity: 1;
     }
   }
-}
-
-.sound__btn{
-  background: transparent;
-  border: 0;
-  padding: 0;
 }
 
 .sound__mic{
@@ -183,6 +183,8 @@
 .sound__volume{
   margin-left: rem(10px);
   margin-top: 0;
+  display: flex;
+  align-items: center;
 }
 
 .duration__lenght--other{

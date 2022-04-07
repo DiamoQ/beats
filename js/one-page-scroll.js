@@ -1,7 +1,7 @@
 const sections = $("section");
 const display = $(".main");
 const sideMenu = $(".fixed-menu");
-const sideLink = $(".fixed-menu__link")
+const sideLink = $(".fixed-menu__link");
 const activeItem = $(".fixed-menu__link--active");
 const sideActiveMenu = sideMenu.find(".fixed-menu__item");
 
@@ -44,6 +44,10 @@ const resetActiveClassForItem = (items, itemEq, activeClass) => {
 }
 
 const performTransition = sectionEq => {
+
+  if(pageScroll.isBlocked()) {
+    return;
+  }
 
   if (inScrool) return;
 
@@ -145,11 +149,14 @@ if (isMobile) {
       const scroller = viewportScroller();
       let scrollDirection = "";
 
+      
+      if (direction == "right") return false;
+      if (direction == "left") return false;
       if (direction == "up") scrollDirection = "next";
       if (direction == "down") scrollDirection = "prev";
 
-      scroller[scrollDirection]();
-    }
-  });
+    scroller[scrollDirection]();
+  }
+});
 }
 

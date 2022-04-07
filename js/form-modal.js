@@ -42,6 +42,7 @@ $('.form').submit((e) => {
         src: "#hiddenWindow",
         type: "inline"
     });
+    pageScroll.toggleBlock();
   });
 }
 });

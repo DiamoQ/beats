@@ -4,6 +4,7 @@ const playerSmallBtn = document.querySelector(".duration__start");
 const durationControl = document.getElementById("durationLevel");
 const soundControl = document.getElementById('micLvl');
 const soundBtn = document.getElementById('mic');
+const dynamBtn = document.getElementById('dynam');
 let intervalId;
 
 
@@ -22,9 +23,17 @@ durationControl.max = video.duration;
 durationControl.addEventListener('input', setVideoDuration)
 
 soundControl.min = 0;
-soundControl.max = 100;
+soundControl.max = 10;
 soundControl.value = soundControl.max;
 soundControl.addEventListener('input', changeSoundVolume)
+
+dynamic.addEventListener("click", soundOf);
+
+video.addEventListener('ended', () => {
+  playerSmallBtn.classList.toggle('video__btn-start--active');
+  playerSmallBtn.classList.remove('duration__start--active');
+  video.currentTime = 0;
+})
 });
 
 function playStop() {
@@ -55,7 +64,22 @@ function changeSoundVolume() {
   video.volume = soundControl.value / 10;
   if (video.volume === 0) {
     soundBtn.classList.add('sound--active');
+    dynamBtn.classList.add('sound__btn--active');
   } else {
     soundBtn.classList.remove('sound--active');
+    dynamBtn.classList.remove('sound__btn--active')
   }
+}
+
+function soundOf() {
+  if (video.volume === 0) {
+     video.volume = soundLevel;
+     soundControl.value = soundLevel * 10;
+     dynamBtn.classList.remove('sound__btn--active')
+  } else{
+  soundLevel = video.volume;
+  video.volume = 0;
+  soundControl.value = 0;
+  dynamBtn.classList.add('sound__btn--active');
+}
 }

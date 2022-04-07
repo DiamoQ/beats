@@ -1853,7 +1853,14 @@ h1, h2, h3, h4, h5, h6, p {
           align-items: center;
   margin: 0 1.25rem;
 }
-.sound:before {
+
+.sound__btn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.sound__btn:before {
+  content: "";
   width: 1.8125rem;
   height: 0.1875rem;
   background-color: #E01F3D;
@@ -1864,18 +1871,10 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transform: translateY(-50%) rotate(42deg);
           transform: translateY(-50%) rotate(42deg);
   z-index: 2;
-  opacity: 1;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  opacity: 0;
 }
-.sound--active:before {
+.sound__btn--active:before {
   opacity: 1;
-}
-
-.sound__btn {
-  background: transparent;
-  border: 0;
-  padding: 0;
 }
 
 .sound__mic {
@@ -1887,6 +1886,12 @@ h1, h2, h3, h4, h5, h6, p {
 .sound__volume {
   margin-left: 0.625rem;
   margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .duration__lenght--other {
