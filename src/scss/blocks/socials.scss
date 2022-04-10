@@ -53,13 +53,19 @@
   transition: 0.7s;
   fill: #B3B3B3;
 
+  &:hover{
+    fill: #000000;
+  }
+
+  @include tablets{
+    &:hover{
+      fill: #B3B3B3;
+    }
+  }
+
   @include phones{
     width: 100%;
    height: 100%;
-  }
-
-  &:hover{
-    fill: #000000;
   }
 }
 

@@ -80,8 +80,27 @@
 
 .presentation__icon{
   position: absolute;
+  width: 100%;
+  height: 100%;
   left: 27%;
   top: 23%;
+
+  @include phones{
+  &--accumulator{
+    left: 21%;
+    top: 19%;
+  }
+
+  &--sound{
+    left: 20%;
+    top: 16%;
+  }
+
+  &--timer{
+    left: 17%;
+    top: 16%;
+  }
+}
 }
 
 .presentation__content{
