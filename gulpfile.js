@@ -1,6 +1,6 @@
 const { src, dest, task, series, watch, parallel } = require('gulp');
 const clean = require('gulp-clean');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('node-sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -21,12 +21,12 @@ const env = process.env.NODE_ENV;
 
 
 task('clean', () => {
-  return src('${DIST_PATH}/**/*', { read: false })
+  return src(`${DIST_PATH}/**/*`, { read: false })
     .pipe(clean());
 });
 
 task('copy:html', () => {
-  return src('${SRC_PATH}/*.html')
+  return src(`${SRC_PATH}/*.html`)
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }))
 });
@@ -40,7 +40,6 @@ task('styles', () => {
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(px2rem())
     .pipe(gulpif(env == 'dev',       
       autoprefixer({
       cascade: false
@@ -49,8 +48,8 @@ task('styles', () => {
     .pipe(gulpif( env == 'prod', gcmq()))
     .pipe(gulpif( env == 'prod', cleanCSS({ compatibility: 'ie8' })))
     .pipe(gulpif ( env == 'dev' , sourcemaps.write()))
-    .pipe(dest(DIST_PATH))
-    .pipe(reload({ stream: true }));
+    .pipe(dest(`${DIST_PATH}/css`))
+    .pipe(reload({ stream: true }))
 });
 
 task('scripts', () => {
@@ -59,25 +58,18 @@ task('scripts', () => {
     'src/js/*.js'
   ])
     .pipe(gulpif(env == 'dev' , sourcemaps.init()))
-    .pipe(concat('main.min.js', { newLine: ";" }))
-    .pipe(babel({
+    .pipe(concat('main.min.js', { newLine: ';' }))
+    .pipe(gulpif(env === 'prod', babel({
       presets: ['@babel/env']
-    }))
-    .pipe(uglify())
+    })))
+    .pipe(gulpif(env === 'prod', uglify()))
     .pipe(gulpif ( env == 'dev' , sourcemaps.write()))
-    .pipe(dest(DIST_PATH))
+    .pipe(dest(`${DIST_PATH}/js`))
     .pipe(reload({ stream: true }));
 });
 
-const icons = [
-  'src/img/map/*.svg',
-  'src/img/video-icons/*.svg',
-  'src/img/sprite-icons/*.svg'
-  
-]
-
 task('icons', () => {
-  return src(icons)
+  return src(`${SRC_PATH}/img/*/*.svg`)
     .pipe(svgo({
       plugins: [
         {
@@ -95,7 +87,25 @@ task('icons', () => {
         }
       }
     }))
-    .pipe(dest('${DIST_PATH}/images//icons'));
+    .pipe(dest(`${DIST_PATH}/img//icons`));
+});
+
+task('copy:anotherSvg', () => {
+  return src(`${SRC_PATH}/img/sprite/*.svg`)
+    .pipe(dest(`${DIST_PATH}/img/icons`))
+    .pipe(reload({ stream: true }))
+});
+
+task('copy:img', () => {
+  return src(`${SRC_PATH}/img/*/*.png`)
+    .pipe(dest(`${DIST_PATH}/img`))
+    .pipe(reload({ stream: true }))
+});
+
+task('copy:video', () => {
+  return src(`${SRC_PATH}/video/*.mp4`)
+    .pipe(dest(`${DIST_PATH}/video`))
+    .pipe(reload({ stream: true }))
 });
 
 
@@ -118,7 +128,7 @@ watch(icons , series('icons'));
 task('default',
  series(
    'clean', 
-   parallel('copy:html', 'styles', 'scripts', 'icons') ,
+   parallel('copy:html', 'styles', 'scripts', 'icons', 'copy:anotherSvg', 'copy:img', 'copy:video') ,
     parallel('watch', 'server')
     )
 );
@@ -127,6 +137,6 @@ task('default',
 task('build',
  series(
    'clean', 
-   parallel('copy:html', 'styles', 'scripts', 'icons') ,
+   parallel('copy:html', 'styles', 'scripts', 'icons', 'copy:anotherSvg', 'copy:img', 'copy:video') ,
 )
 );

@@ -7,5 +7,5 @@ $tablets: 768px;
 $phones: 480px;
 
 @import 'media.scss';
-@import '**.scss';
+@import 'blocks/*.scss';
 

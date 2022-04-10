@@ -3,6 +3,6 @@ module.exports = {
   DIST_PATH : "dist",
   STYLES_LIBS : ["node_modules/normalize.css/normalize.css"],
   SCRIPT_LIBS : ['jQuery/*.js',
-                 'node_modules/jquery-touchswipe/*.js',
-                 'node_modules/mobile-detect/*.js'],
+                 'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
+                 'node_modules/mobile-detect/mobile-detect.js'],
 }
