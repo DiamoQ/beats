@@ -69,12 +69,12 @@ task('scripts', () => {
 });
 
 task('icons', () => {
-  return src(`${SRC_PATH}/img/*/*.svg`)
+  return src(`${SRC_PATH}/img/**/**.svg`)
     .pipe(svgo({
       plugins: [
         {
           removeAttrs: {
-            attrs: "(fill|stroke|style|width|height|data.*)"
+            attrs: "(data.*)"
           }
         }
       ]
@@ -121,7 +121,7 @@ task('watch', () => {
 watch('src/scss/**.scss', series('styles'));
 watch('src/**.html', series('copy:html'));
 watch('src/js/**.js', series('scripts'));
-watch(icons , series('icons'));
+watch('src/img/*/*.svg' , series('icons'));
 });
 
 
@@ -137,6 +137,6 @@ task('default',
 task('build',
  series(
    'clean', 
-   parallel('copy:html', 'styles', 'scripts', 'icons', 'copy:anotherSvg', 'copy:img', 'copy:video') ,
+   parallel('copy:html', 'styles', 'scripts', 'icons' , 'copy:anotherSvg', 'copy:img', 'copy:video') ,
 )
 );

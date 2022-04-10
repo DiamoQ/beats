@@ -9,6 +9,20 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
+
+  &--footer{
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    border-top: rem(1px) solid rgba(255,255,255, 0.1);
+    padding: rem(20px) 0 rem(18px) 0;
+  
+    @include phones{
+      flex-direction:column;
+      text-align: center;
+    }
+  }
+
 }
 
 .section__name{

@@ -13,12 +13,15 @@ const init = () => {
     [55.709780, 37.655858]
   ];
 
+  MyIconLayout = ymaps.templateLayoutFactory.createClass([
+    '<svg width="46" height="57" style="position: absolute; top: -35px; left: -52px;">',
+        '<use href="img/icons/sprite.svg#map--map"/>',
+    '</svg>'
+].join(''));
+
   const myCollections = new ymaps.GeoObjectCollection({}, {
     draggable: false,
-    iconLayout: 'default#image',
-    iconImageHref: "img/map/map.svg",
-    iconImageSize: [46, 57],
-    iconImageOffset: [-35, -52]
+    iconLayout: MyIconLayout,
   });
 
   coords.forEach (coord  => {

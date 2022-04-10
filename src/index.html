@@ -66,19 +66,19 @@
             <ul class="parameter__list">
               <li class="parameter__item">
                 <svg class="parameter__img noise">
-                  <use xlink:href="./sprite/sprite-icons.svg#noice"></use>
+                  <use xlink:href="img/icons/sprite-icons.svg#noice"></use>
                 </svg>
                 <p class="parameter__text">Безупречный<br>звук</p>
               </li>
               <li class="parameter__item">
                 <svg class="parameter__img battery">
-                  <use xlink:href="./sprite/sprite-icons.svg#battery"></use>
+                  <use xlink:href="img/icons/sprite-icons.svg#battery"></use>
                 </svg>
                 <p class="parameter__text">До&nbsp;40&nbsp;часов<br>работы</p>
               </li>
               <li class="parameter__item">
                 <svg class="parameter__img fast-fuel">
-                  <use xlink:href="./sprite/sprite-icons.svg#fast-fuel"></use>
+                  <use xlink:href="img/icons/sprite-icons.svg#fast-fuel"></use>
                 </svg>
                 <p class="parameter__text">Технология <br>Fast Fuel</p>
               </li>
@@ -99,7 +99,7 @@
                 <div class="presentation__img">
                   <div class="presentation__img-wrapper">
                     <svg class="presentation__icon">
-                      <use xlink:href="./sprite/sprite-icons.svg#accumulator"></use>
+                      <use xlink:href="img/icons/sprite-icons.svg#accumulator"></use>
                     </svg>
                   </div>
                 </div>
@@ -113,7 +113,7 @@
                 <div class="presentation__img">
                   <div class="presentation__img-wrapper">
                     <svg class="presentation__icon">
-                      <use xlink:href="./sprite/sprite-icons.svg#sound"></use>
+                      <use xlink:href="img/icons/sprite-icons.svg#sound"></use>
                     </svg>
                   </div>
                 </div>
@@ -128,7 +128,7 @@
                 <div class="presentation__img">
                   <div class="presentation__img-wrapper">
                     <svg class="presentation__icon">
-                      <use xlink:href="./sprite/sprite-icons.svg#timer"></use>
+                      <use xlink:href="img/icons/sprite-icons.svg#timer"></use>
                     </svg>
                   </div>
                 </div>
@@ -160,7 +160,7 @@
                   <div class="float-menu">
                     <div class="button-menu float-menu__btn">
                       <svg class="button-menu__img">
-                        <use xlink:href="./sprite/sprite-icons.svg#gear"></use>
+                        <use xlink:href="img/icons/sprite-icons.svg#gear"></use>
                       </svg>
                     </div>
                     <div class="float-menu__dropdown">
@@ -244,7 +244,7 @@
                   <div class="float-menu">
                     <div class="button-menu float-menu__btn">
                       <svg class="button-menu__img">
-                        <use xlink:href="./sprite/sprite-icons.svg#gear"></use>
+                        <use xlink:href="img/icons/sprite-icons.svg#gear"></use>
                       </svg>
                     </div>
                     <div class="float-menu__dropdown">
@@ -504,7 +504,9 @@
                 <source src="video/Beats by Dr.Dre - Beats Solo3 Wireless.mp4" type="video/mp4">
               </video>
               <button class="video__btn-start">
-                <img src="img/video-icons/play.svg" alt="" class="start video__btn-start">
+                <svg class="video__btn-start">
+                  <use xlink:href="img/icons/sprite.svg#video-icons--play" class="start"></use>                 
+                </svg>
               </button>
             </div>
             <div class="video__toolbar">
@@ -519,7 +521,9 @@
               </div>
               <div class="sound" id="mic">
                 <button class="sound__btn" id="dynam">
-                  <img src="img/video-icons/volume.svg" class="sound__mic" id="dynamic" alt="">
+                  <svg  class="sound__mic" id="dynamic">
+                    <use xlink:href="img/icons/sprite.svg#video-icons--volume" class="start"></use>                 
+                  </svg>
                 </button>
                 <div class="sound__volume">
                   <input type="range" class="duration__length duration__lenght--other" id="micLvl">
@@ -618,7 +622,7 @@
         <div class="section-footer__map" id="map">
         </div>
         <footer class="footer">
-          <div class="container  footer__container">
+          <div class="container container--footer">
             <div class="footer__collector">
               <address class="footer__contact">
                 <div class="contact__text">
@@ -633,7 +637,7 @@
                 <li class="socials__item"><a href="#" class="socials__link">
                     <div class="socials__icon socials__icon--tg">
                       <svg class="socials__icon--vk soc-icon">
-                        <use xlink:href="./sprite/sprite-icons.svg#vk"></use>
+                        <use xlink:href="img/icons/sprite-icons.svg#vk"></use>
                       </svg>
                     </div>
                   </a>
@@ -642,7 +646,7 @@
                   <a href="#" class="socials__link">
                     <div class="socials__icon socials__icon--fb">
                       <svg class="socials__icon--fb soc-icon">
-                        <use xlink:href="./sprite/sprite-icons.svg#fb"></use>
+                        <use xlink:href="img/icons/sprite-icons.svg#fb"></use>
                       </svg>
                     </div>
                   </a>
@@ -651,7 +655,7 @@
                   <a href="#" class="socials__link">
                     <div class="socials__icon socials__icon--in">
                       <svg class="socials__icon--inst soc-icon">
-                        <use xlink:href="./sprite/sprite-icons.svg#inst"></use>
+                        <use xlink:href="img/icons/sprite-icons.svg#inst"></use>
                       </svg>
                     </div>
                   </a>
@@ -660,7 +664,7 @@
                   <a href="#" class="socials__link">
                     <div class="socials__icon socials__icon--tg">
                       <svg class="socials__icon--tg soc-icon">
-                        <use xlink:href="./sprite/sprite-icons.svg#tg"></use>
+                        <use xlink:href="img/icons/sprite-icons.svg#tg"></use>
                       </svg>
                     </div>
                   </a>
@@ -703,10 +707,8 @@
       </li>
     </ul>
   </nav>
-  <script src="js/main.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
