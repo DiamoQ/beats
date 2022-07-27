@@ -18,7 +18,5 @@ menu.addEventListener('click', function (ev){
         toggleMenu(ev);
         pageScroll.toggleBlock("unblock");
     }
-
-    console.log(menu, 'this is menu');
 })
 
